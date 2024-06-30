@@ -10,6 +10,20 @@ import joblib  # To save and load the model
 # Load the dataset
 F_I_D = pd.read_csv('Financial_inclusion_dataset.csv')
 
+# Display the first few rows of the dataset
+print(F_I_D.head())
+
+# Display summary statistics:
+print(F_I_D.info())
+print(F_I_D.describe(include='all'))
+
+# Checking the shape of the dataset:
+print(F_I_D.shape)
+
+# Handle Missing and corrupted values
+# Identifying missing values:
+print(F_I_D.isnull().sum())
+
 # Handle Missing and corrupted values
 # Define expected categories for each categorical column:
 expected_categories = {
